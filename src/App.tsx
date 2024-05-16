@@ -200,9 +200,9 @@ function App() {
         <hr />
       </div>
       {/* 12. Logo again */}
-      <div className="logo">
+      {/* <div className="logo">
         <img src={logo} alt="Logo" />
-      </div>
+      </div> */}
     </div>
   );
 }
