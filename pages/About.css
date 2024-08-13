@@ -1,0 +1,44 @@
+.introductory-text-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 200px;
+  gap: 20px;
+}
+
+.introductory-text-container p {
+  padding-bottom: 20px; /* Adjust the value as needed */
+}
+
+.introductory-text {
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  color: white;
+  text-transform: uppercase;
+}
+
+.introductory-text-I {
+  font-size: 30px;
+}
+
+.introductory-text-II {
+  font-size: 24px;
+}
+
+.introductory-text-III {
+  font-size: 26px;
+}
+
+@media only screen and (max-width: 600px) {
+  .introductory-text {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .introductory-text-I {
+    font-size: 12px;
+  }
+  .introductory-text-II {
+    font-size: 6px;
+  }
+}
