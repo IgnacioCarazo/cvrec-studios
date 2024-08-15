@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Work.css"; // Import your CSS file
 
 import video1 from "../assets/Row1Place1.mp4";

@@ -1,4 +1,3 @@
-import React from "react";
 import "./About.css"; // Import your CSS file
 import logo from "../assets/logo.png";
 import instagram_icon from "../assets/instagram.png";
