@@ -4,7 +4,14 @@
   /* You can add more src declarations for different font file formats */
 }
 
+body {
+  font-family: "Open Sauce", sans-serif;
+}
+
+/* Apply to specific elements if needed */
+h1,
+h2,
+h3,
 p {
-  line-height: 1.5;
-  font-family: "Korataki", sans-serif;
+  font-family: "Open Sauce", sans-serif;
 }
