@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./About.css";
 import exampleImage from "../../assets/photos/about-image.jpg";
 
@@ -12,8 +11,8 @@ const About: React.FC = () => {
           <div className="about-text">
             <p>
               Charlotta Roos, the founder of CVRec Studios, is a 28-year old
-              female videographer based in Helsinki, Finland, but working
-              worldwide.
+              self-taught female videographer based in Helsinki, Finland, but
+              working worldwide.
             </p>
             <p>
               Driven by a passion for intertwining sound and motion in various
@@ -23,17 +22,6 @@ const About: React.FC = () => {
               empowers her subjects to express their true selves.
             </p>
             <p>Welcome to her portfolio.</p>
-          </div>
-          <div className="navigation">
-            <Link className="nav-item" to="/videos">
-              Videos
-            </Link>
-            <Link className="nav-item" to="/photos">
-              Photos
-            </Link>
-            <Link className="nav-item" to="/about">
-              About
-            </Link>
           </div>
         </div>
       </div>

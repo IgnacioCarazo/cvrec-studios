@@ -1,0 +1,24 @@
+.photos-page {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+  overflow-y: hidden;
+}
+
+.photos-holder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* This will set 3 photos per row */
+  gap: 20px; /* Consistent gap between photos */
+  width: 100%; /* Make sure the container uses the available width */
+}
+
+@media (max-width: 768px) {
+  .photos-holder {
+    margin-top: 100px;
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Stack photos vertically on smaller screens */
+  }
+}

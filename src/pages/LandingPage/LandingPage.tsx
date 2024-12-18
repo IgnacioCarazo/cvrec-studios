@@ -6,14 +6,23 @@ import "./LandingPage.css";
 import horizontal from "../../assets/videos/WEBSITEhorisontal.mp4";
 import vertical from "../../assets/videos/WEBSITEvertical.mp4";
 import { Link } from "react-router-dom";
-import logo from "../../assets/photos/logo_white.png";
+import logo from "../../assets/photos/logo-white.png";
 
 const LandingPage: React.FC = () => {
-  // Assuming you want to decide between horizontal and vertical video dynamically
-  const isMobile = window.innerWidth < window.innerHeight; // Simple check to determine orientation
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   return (
     <div className="landing-page">
+      <ReactPlayer
+        url={isMobile ? vertical : horizontal} // Dynamically switch between videos based on device orientation
+        playing
+        loop
+        muted
+        width="200vw"
+        height="200vh"
+        className="background-video-shadow"
+        playsinline
+      />
       <ReactPlayer
         url={isMobile ? vertical : horizontal} // Dynamically switch between videos based on device orientation
         playing

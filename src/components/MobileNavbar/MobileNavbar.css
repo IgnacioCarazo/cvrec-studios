@@ -1,0 +1,123 @@
+/* Navbar Container */
+.mobile-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid black;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for showing/hiding */
+}
+
+/* To hide the navbar when scrolling down */
+.mobile-navbar.hidden {
+  transform: translateY(-100%); /* Move the navbar off-screen */
+}
+
+/* To show the navbar when scrolling up */
+.mobile-navbar.visible {
+  transform: translateY(0); /* Move the navbar back into view */
+}
+
+.mobile-nav-item {
+  margin-left: -10px;
+}
+
+/* Rest of your existing styles remain unchanged */
+.mobile-burger-menu {
+  display: flex;
+  position: absolute;
+  left: 20px;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  z-index: 9;
+}
+
+.mobile-burger-menu .mobile-bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-burger-menu .mobile-bar.mobile-open:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-burger-menu .mobile-bar.mobile-open:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-burger-menu .mobile-bar.mobile-open:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.mobile-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-logo img {
+  max-width: 100px;
+  height: 30px;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 70%;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-menu span,
+.mobile-menu a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mobile-menu span:hover,
+.mobile-menu a:hover {
+  background-color: rgba(85, 85, 85, 0.3);
+}
+
+.mobile-menu span:active,
+.mobile-menu a:active {
+  background-color: gray;
+  color: white;
+}
+
+.mobile-menu span:focus,
+.mobile-menu a:focus {
+  outline: 2px solid gray;
+  background-color: rgba(85, 85, 85, 0.3);
+}
+
+@media (max-width: 768px) {
+  .mobile-burger-menu {
+    display: flex;
+  }
+
+  .mobile-logo img {
+    max-width: 80px;
+  }
+}
