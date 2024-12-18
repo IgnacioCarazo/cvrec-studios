@@ -9,8 +9,8 @@
 .photos-holder {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* This will set 3 photos per row */
-  gap: 20px; /* Consistent gap between photos */
-  width: 100%; /* Make sure the container uses the available width */
+  gap: 70px; /* Consistent gap between photos */
+  row-gap: 80px;
 }
 
 @media (max-width: 768px) {
