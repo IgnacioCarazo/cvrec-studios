@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "../../assets/photos/logo-black.png";
 import "./DesktopNavbar.css";
@@ -8,23 +8,29 @@ interface DesktopNavbarProps {
 }
 
 const DesktopNavbar: React.FC<DesktopNavbarProps> = ({ onCategoryChange }) => {
-  const navigate = useNavigate(); // Hook to programmatically navigate
-  const location = useLocation(); // Hook to get the current route
+  const navigate = useNavigate();
+  const location = useLocation();
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   const handleCategorySelect = (category: "music" | "events" | "dance") => {
-    onCategoryChange(category); // Trigger category change
-    setActiveCategory(category); // Set the active category
-    navigate("/videos"); // Navigate to videos page
+    onCategoryChange(category);
+    setActiveCategory(category);
+    navigate("/videos");
   };
 
   const getNavItemClass = (path: string) => {
     return location.pathname === path ? "nav-item active" : "nav-item";
   };
 
-  // Check if the Videos dropdown is active based on the selected category
   const isVideosActive =
     location.pathname.startsWith("/videos") || activeCategory;
+
+  // Reset activeCategory when not on /videos
+  useEffect(() => {
+    if (!location.pathname.startsWith("/videos")) {
+      setActiveCategory(null);
+    }
+  }, [location.pathname]);
 
   return (
     <div className="navbar">
@@ -37,9 +43,24 @@ const DesktopNavbar: React.FC<DesktopNavbarProps> = ({ onCategoryChange }) => {
       <div className={`nav-item dropdown ${isVideosActive ? "active" : ""}`}>
         <span>Videos</span>
         <div className="dropdown-content">
-          <span onClick={() => handleCategorySelect("music")}>Music</span>
-          <span onClick={() => handleCategorySelect("events")}>Events</span>
-          <span onClick={() => handleCategorySelect("dance")}>Dance</span>
+          <span
+            className={activeCategory === "music" ? "active-category" : ""}
+            onClick={() => handleCategorySelect("music")}
+          >
+            Music
+          </span>
+          <span
+            className={activeCategory === "events" ? "active-category" : ""}
+            onClick={() => handleCategorySelect("events")}
+          >
+            Events
+          </span>
+          <span
+            className={activeCategory === "dance" ? "active-category" : ""}
+            onClick={() => handleCategorySelect("dance")}
+          >
+            Dance
+          </span>
         </div>
       </div>
 
