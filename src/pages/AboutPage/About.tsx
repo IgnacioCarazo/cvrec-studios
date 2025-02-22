@@ -11,8 +11,8 @@ const About: React.FC = () => {
           <div className="about-text">
             <p>
               Charlotta Roos, the founder of CVRec Studios, is a 28-year old
-              self-taught female videographer based in Helsinki, Finland, but
-              working worldwide.
+              self-taught female videographer and photographer based in
+              Helsinki, Finland, but working worldwide.
             </p>
             <p>
               Driven by a passion for intertwining sound and motion in various

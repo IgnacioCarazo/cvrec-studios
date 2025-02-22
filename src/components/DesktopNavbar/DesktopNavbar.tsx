@@ -70,6 +70,9 @@ const DesktopNavbar: React.FC<DesktopNavbarProps> = ({ onCategoryChange }) => {
       <Link className={getNavItemClass("/about")} to="/about">
         About
       </Link>
+      <Link className={getNavItemClass("/contact")} to="/contact">
+        Contact
+      </Link>
       <a
         className={getNavItemClass("/instagram")}
         href="https://www.instagram.com/cvrecstudios/"

@@ -18,16 +18,6 @@ const LandingPage: React.FC = () => {
         playing
         loop
         muted
-        width="200vw"
-        height="200vh"
-        className="background-video-shadow"
-        playsinline
-      />
-      <ReactPlayer
-        url={isMobile ? vertical : horizontal} // Dynamically switch between videos based on device orientation
-        playing
-        loop
-        muted
         width="100vw"
         height="100vh"
         className="background-video"

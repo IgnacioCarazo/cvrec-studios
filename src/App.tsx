@@ -8,6 +8,7 @@ import DesktopNavbar from "./components/DesktopNavbar/DesktopNavbar";
 import { useState } from "react";
 import MobileNavbar from "./components/MobileNavbar/MobileNavbar";
 import { useMediaQuery } from "react-responsive";
+import Contact from "./pages/ContactPage/Contact";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState<
@@ -40,6 +41,7 @@ function App() {
           element={<VideosPage selectedCategory={selectedCategory} />}
         />
         <Route path="/photos" element={<PhotosPage />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );

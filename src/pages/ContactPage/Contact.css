@@ -1,0 +1,33 @@
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh; /* Adjust the height of the section */
+  padding-top: 5%; /* Move it slightly lower */
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 125px; /* Adds space between the title and email */
+  text-align: center;
+}
+
+.contact-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.contact-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .contact-section {
+    padding-top: 30%;
+  }
+}

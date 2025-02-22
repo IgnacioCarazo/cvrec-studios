@@ -12,6 +12,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ onCategoryChange }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0); // To store the last scroll position
   const [visible, setVisible] = useState(true); // To control visibility
+  const [subMenuOpen, setSubMenuOpen] = useState(false); // To control the sub-menu (for videos)
 
   // Function to handle scroll events
   const handleScroll = () => {
@@ -39,6 +40,14 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ onCategoryChange }) => {
     onCategoryChange(category);
     navigate("/videos");
     setMenuOpen(false);
+    setSubMenuOpen(false); // Close the dropdown when a category is selected
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    if (menuOpen) {
+      setSubMenuOpen(false); // Close dropdown when menu is closed
+    }
   };
 
   return (
@@ -48,7 +57,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ onCategoryChange }) => {
       {/* Burger Menu Icon */}
       <button
         className="mobile-burger-menu"
-        onClick={() => setMenuOpen(!menuOpen)}
+        onClick={toggleMenu}
         aria-label="Toggle menu"
       >
         <div className={`mobile-bar ${menuOpen ? "mobile-open" : ""}`}></div>
@@ -64,33 +73,46 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ onCategoryChange }) => {
       </Link>
 
       {/* Dropdown Menu */}
-      {menuOpen && (
-        <div className="mobile-menu">
-          <span onClick={() => handleCategorySelect("music")}>
-            Music Videos
+      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+        {/* "Video Categories" option which will expand to show more options */}
+        <div
+          className="dropdown-container"
+          onClick={() => setSubMenuOpen(!subMenuOpen)}
+        >
+          <span className="dropdown-item">
+            Video Categories
+            <span className={`arrow ${subMenuOpen ? "up" : "down"}`}>
+              &#9660;
+            </span>
           </span>
-          <span onClick={() => handleCategorySelect("events")}>
-            Event Videos
-          </span>
-          <span onClick={() => handleCategorySelect("dance")}>
-            Dance Videos
-          </span>
-          <Link to="/photos" onClick={() => setMenuOpen(false)}>
-            Photos
-          </Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)}>
-            About
-          </Link>
-          <a
-            href="https://www.instagram.com/cvrecstudios/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setMenuOpen(false)}
-          >
-            Instagram
-          </a>
         </div>
-      )}
+
+        {subMenuOpen && (
+          <>
+            <span onClick={() => handleCategorySelect("music")}>Music</span>
+            <span onClick={() => handleCategorySelect("events")}>Event</span>
+            <span onClick={() => handleCategorySelect("dance")}>Dance</span>
+          </>
+        )}
+
+        <Link to="/photos" onClick={() => setMenuOpen(false)}>
+          Photo
+        </Link>
+        <Link to="/about" onClick={() => setMenuOpen(false)}>
+          About
+        </Link>
+        <Link to="/contact" onClick={() => setMenuOpen(false)}>
+          Contact
+        </Link>
+        <a
+          href="https://www.instagram.com/cvrecstudios/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setMenuOpen(false)}
+        >
+          Instagram
+        </a>
+      </div>
     </div>
   );
 };
