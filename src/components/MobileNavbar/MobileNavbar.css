@@ -148,7 +148,7 @@
 .mobile-menu .dropdown-container + span,
 .mobile-menu .dropdown-container + span + span,
 .mobile-menu .dropdown-container + span + span + span {
-  font-size: 12px; /* Smaller font size for submenu items */
+  font-size: 13px; /* Smaller font size for submenu items */
 }
 
 /* REMOVE hover and active states for the video dropdown */
