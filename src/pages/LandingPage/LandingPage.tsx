@@ -6,7 +6,7 @@ import "./LandingPage.css";
 import horizontal from "../../assets/videos/WEBSITEhorisontal.mp4";
 import vertical from "../../assets/videos/WEBSITEvertical.mp4";
 import { Link } from "react-router-dom";
-import logo from "../../assets/photos/logo-white.png";
+// import logo from "../../assets/photos/logo-white.png";
 
 const LandingPage: React.FC = () => {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
@@ -24,9 +24,9 @@ const LandingPage: React.FC = () => {
         playsinline
       />
       <div className="content">
-        <div className="logo">
+        {/* <div className="logo">
           <img src={logo} alt="Logo" />
-        </div>
+        </div> */}
         <div className="navigation">
           <Link className="nav-item" to="/videos">
             Videos

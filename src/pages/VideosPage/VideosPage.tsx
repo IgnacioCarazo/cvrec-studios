@@ -13,7 +13,7 @@ const videoCategories = {
       description: "Juls at Maiden Voyage, London '23",
     },
     {
-      url: "https://player.vimeo.com/video/1040451119?title=0&byline=0&portrait=0&controls=1",
+      url: "https://player.vimeo.com/video/1059679374?title=0&byline=0&portrait=0&controls=1",
       description: "Dailypaper x LadiesLove, London flagship store '23",
     },
     {

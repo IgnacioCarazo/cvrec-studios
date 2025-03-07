@@ -52,7 +52,7 @@
   align-items: center;
   color: white;
   gap: 150px;
-  top: 40%;
+  top: 75%;
 }
 
 .navigation {
@@ -133,7 +133,7 @@
   }
 
   .content {
-    top: 50%;
+    top: 75%;
     gap: 100px;
   }
 
