@@ -25,7 +25,7 @@ const videoCategories = {
       description: "Rosey Gold @ Anomaly, Helsinki '23",
     },
     {
-      url: "https://player.vimeo.com/video/1059682523?title=0&byline=0&portrait=0&controls=1",
+      url: "https://player.vimeo.com/video/1059679436?title=0&byline=0&portrait=0&controls=1",
       description: "DJ Phaphane @ Anomaly, Helsinki '23",
     },
   ],
