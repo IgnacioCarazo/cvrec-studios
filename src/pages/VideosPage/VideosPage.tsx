@@ -9,7 +9,7 @@ const videoCategories = {
       description: "SkylaTyla at Weekend Festival, Helsinki '23",
     },
     {
-      url: "https://player.vimeo.com/video/1040451592?title=0&byline=0&portrait=0&controls=1",
+      url: "https://player.vimeo.com/video/1065924298?title=0&byline=0&portrait=0&controls=1",
       description: "Juls at Maiden Voyage, London '23",
     },
     {
