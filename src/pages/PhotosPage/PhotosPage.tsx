@@ -26,6 +26,9 @@ const PhotosPage: React.FC = () => {
         <Photo url={photo2} caption="Yasmine Yamajako '24" />
         <Photo url={photo11} caption="SkylaTyla '23" />
         <Photo url={photo8} caption="Sisterhood '24" />
+        <Photo url={photo13} caption="Have you met Samsam? ’25" />
+        <Photo url={photo14} caption="Have you met Samsam? ’25" />
+        <Photo url={photo15} caption="Have you met Samsam? ’25" />
         <Photo url={photo12} caption="Neiya '23" />
         <Photo url={photo3} caption="School Photo '23" />
         <Photo url={photo10} caption="Adeola '23" />
@@ -35,9 +38,6 @@ const PhotosPage: React.FC = () => {
         <Photo url={photo4} caption="Malachi '23" />
         <Photo url={photo9} caption="Adeola '23" />
         <Photo url={photo7} caption="Mallorca '23" />
-        <Photo url={photo13} caption="Have you met Samsam? ’25" />
-        <Photo url={photo14} caption="Have you met Samsam? ’25" />
-        <Photo url={photo15} caption="Have you met Samsam? ’25" />
       </div>
     </div>
   );
