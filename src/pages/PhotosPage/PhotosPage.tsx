@@ -14,6 +14,9 @@ import photo9 from "../../assets/photos/image00009.jpeg";
 import photo10 from "../../assets/photos/image00010.jpeg";
 import photo11 from "../../assets/photos/image00011.jpeg";
 import photo12 from "../../assets/photos/image00012.jpeg";
+import photo13 from "../../assets/photos/image00013.jpeg";
+import photo14 from "../../assets/photos/image00014.jpeg";
+import photo15 from "../../assets/photos/image00015.jpeg";
 import Photo from "../../components/Photo/Photo";
 
 const PhotosPage: React.FC = () => {
@@ -32,6 +35,9 @@ const PhotosPage: React.FC = () => {
         <Photo url={photo4} caption="Malachi '23" />
         <Photo url={photo9} caption="Adeola '23" />
         <Photo url={photo7} caption="Mallorca '23" />
+        <Photo url={photo13} caption="Have you met Samsam? ’25" />
+        <Photo url={photo14} caption="Have you met Samsam? ’25" />
+        <Photo url={photo15} caption="Have you met Samsam? ’25" />
       </div>
     </div>
   );
