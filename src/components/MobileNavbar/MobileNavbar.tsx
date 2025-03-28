@@ -89,9 +89,24 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ onCategoryChange }) => {
 
         {subMenuOpen && (
           <>
-            <span onClick={() => handleCategorySelect("music")}>Music</span>
-            <span onClick={() => handleCategorySelect("events")}>Event</span>
-            <span onClick={() => handleCategorySelect("dance")}>Dance</span>
+            <Link
+              to="/videos/music"
+              onClick={() => handleCategorySelect("music")}
+            >
+              Music
+            </Link>
+            <Link
+              to="/videos/events"
+              onClick={() => handleCategorySelect("events")}
+            >
+              Event
+            </Link>
+            <Link
+              to="/videos/dance"
+              onClick={() => handleCategorySelect("dance")}
+            >
+              Dance
+            </Link>
           </>
         )}
 

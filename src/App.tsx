@@ -1,5 +1,5 @@
-import "./App.css";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import React from "react";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import About from "./pages/AboutPage/About";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import VideosPage from "./pages/VideosPage/VideosPage";
@@ -19,13 +19,12 @@ function App() {
     setSelectedCategory(category);
   };
 
-  // Get current location
   const location = useLocation();
   const isMobile = useMediaQuery({ maxWidth: 768 });
 
   return (
     <>
-      {/* Conditionally render Navbar, hide it on "/home" (Landing Page) */}
+      {/* Conditionally render Navbar */}
       {location.pathname !== "/home" &&
         (isMobile ? (
           <MobileNavbar onCategoryChange={handleCategoryChange} />
@@ -36,10 +35,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="*" element={<Navigate to="/home" />} />
         <Route path="/home" element={<LandingPage />} />
-        <Route
-          path="/videos"
-          element={<VideosPage selectedCategory={selectedCategory} />}
-        />
+        <Route path="/videos/:category" element={<VideosPage />} />
         <Route path="/photos" element={<PhotosPage />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import "./LandingPage.css";
 
@@ -10,6 +10,14 @@ import { Link } from "react-router-dom";
 
 const LandingPage: React.FC = () => {
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  // State to track dropdown visibility for Videos (mobile only)
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+  // Toggle the dropdown visibility for mobile
+  const handleDropdownToggle = () => {
+    setIsDropdownVisible(!isDropdownVisible);
+  };
 
   return (
     <div className="landing-page">
@@ -28,9 +36,27 @@ const LandingPage: React.FC = () => {
           <img src={logo} alt="Logo" />
         </div> */}
         <div className="navigation">
-          <Link className="nav-item" to="/videos">
+          <div
+            className="nav-item"
+            onClick={isMobile ? handleDropdownToggle : undefined} // Only add click event on mobile
+          >
             Videos
-          </Link>
+            <div
+              className={`dropdown ${
+                isMobile && isDropdownVisible ? "visible" : ""
+              }`}
+            >
+              <Link to="/videos/music" className="dropdown-item">
+                Music
+              </Link>
+              <Link to="/videos/events" className="dropdown-item">
+                Events
+              </Link>
+              <Link to="/videos/dance" className="dropdown-item">
+                Dance
+              </Link>
+            </div>
+          </div>
           <Link className="nav-item" to="/photos">
             Photos
           </Link>

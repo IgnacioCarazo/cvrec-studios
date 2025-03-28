@@ -1,6 +1,7 @@
 import React from "react";
 import "./VideosPage.css";
 import VideoComponent from "../../components/VideoHorizontal/VideoComponent";
+import { useParams } from "react-router-dom";
 
 const videoCategories = {
   music: [
@@ -67,13 +68,16 @@ const videoCategories = {
   ],
 };
 
-interface VideosPageProps {
-  selectedCategory: "music" | "events" | "dance";
-}
+const VideosPage: React.FC = () => {
+  // Capture the category from the URL
+  const { category } = useParams<{ category: "music" | "events" | "dance" }>();
 
-const VideosPage: React.FC<VideosPageProps> = ({ selectedCategory }) => {
+  // If no category is provided, default to 'music'
+  const selectedCategory = category || "music";
+
   const renderVideos = () => {
     const videos = videoCategories[selectedCategory];
+
     if (selectedCategory === "dance") {
       // Single-video layout for dance category
       return videos.map((video, index) => (
@@ -106,7 +110,6 @@ const VideosPage: React.FC<VideosPageProps> = ({ selectedCategory }) => {
 
   return (
     <div className="videos-page">
-      {/* Videos Section */}
       <div className="videos-holder">{renderVideos()}</div>
     </div>
   );
