@@ -11,11 +11,11 @@ import { useMediaQuery } from "react-responsive";
 import Contact from "./pages/ContactPage/Contact";
 
 function App() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [selectedCategory, setSelectedCategory] = useState<
     "music" | "events" | "dance"
   >("music");
 
+  console.log(selectedCategory);
   const handleCategoryChange = (category: "music" | "events" | "dance") => {
     setSelectedCategory(category);
   };
