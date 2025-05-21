@@ -9,7 +9,7 @@ interface PhotoProps {
 const Photo: React.FC<PhotoProps> = ({ url, caption }) => {
   return (
     <div className="photo-container">
-      <img src={url} alt={caption} className="photo-image" />
+      <img src={url} alt={caption} className="photo-image" loading="lazy" />
       {caption && (
         <div className="photo-overlay">
           <span className="photo-caption">{caption}</span>

@@ -1,12 +1,17 @@
 import React from "react";
 import "./About.css";
-import exampleImage from "../../assets/photos/about-image.jpg";
 
 const About: React.FC = () => {
   return (
     <section className="about-section">
       <div className="about-content">
-        <img src={exampleImage} alt="About Us" className="about-image" />
+        <div className="about-image-wrapper">
+          <img
+            src="https://i.imgur.com/1NUhMCQ.jpeg"
+            alt="About Charlotta Roos"
+            className="about-image"
+          />
+        </div>
         <div className="text-and-nav-container">
           <div className="about-text">
             <p>
