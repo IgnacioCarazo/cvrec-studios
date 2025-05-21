@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import "./LandingPage.css";
 
@@ -9,6 +9,21 @@ import { Link } from "react-router-dom";
 // import logo from "../../assets/photos/logo-white.png";
 
 const LandingPage: React.FC = () => {
+  const preloadImages = [
+    "https://res.cloudinary.com/dfh4b2nlw/image/upload/v1747860304/image00002_nfpylw.webp",
+    "https://res.cloudinary.com/dfh4b2nlw/image/upload/v1747860306/image00011_xuyzah.webp",
+    "https://res.cloudinary.com/dfh4b2nlw/image/upload/v1747860305/image00008_dhvtw6.webp",
+    "https://res.cloudinary.com/dfh4b2nlw/image/upload/v1747860307/image00013_p26bjn.webp",
+    "https://res.cloudinary.com/dfh4b2nlw/image/upload/v1747860307/image00014_tw2yit.webp",
+    "https://res.cloudinary.com/dfh4b2nlw/image/upload/v1747860308/image00015_i7i8zz.webp",
+  ];
+
+  useEffect(() => {
+    preloadImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
   // State to track dropdown visibility for Videos (mobile only)

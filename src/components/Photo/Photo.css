@@ -4,7 +4,36 @@
   position: relative;
   display: inline-block;
   width: 100%;
-  max-width: 400px; /* Or whatever your max width is */
+  max-width: 400px;
+  aspect-ratio: 3 / 4; /* Ensures consistent space for loading placeholder */
+  background-color: transparent;
+  overflow: hidden;
+}
+
+/* Placeholder shown while image is loading */
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.3); /* Light transparent grey */
+  border-radius: 4px;
+  animation: pulse 1.5s infinite ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+/* Pulse animation effect */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .photo-image {
@@ -12,6 +41,8 @@
   width: 100%;
   height: auto;
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 0;
 }
 
 .photo-container:hover .photo-image {
@@ -23,13 +54,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: auto; /* Ensure it covers the image size */
+  height: auto;
   background-color: rgba(0, 0, 0, 0.1);
   opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: opacity 0.3s ease;
+  z-index: 3;
 }
 
 .photo-container:hover .photo-overlay {
@@ -42,6 +74,7 @@
   text-align: center;
   padding: 10px;
 }
+
 @media (max-width: 768px) {
   .photo-overlay {
     bottom: 0;
