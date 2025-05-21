@@ -7,7 +7,7 @@ const About: React.FC = () => {
       <div className="about-content">
         <div className="about-image-wrapper">
           <img
-            src="https://i.imgur.com/1NUhMCQ.jpeg"
+            src="https://res.cloudinary.com/dfh4b2nlw/image/upload/v1747860304/about-image_gflijp.webp"
             alt="About Charlotta Roos"
             className="about-image"
           />
