@@ -6,7 +6,7 @@
   width: 100%;
   max-width: 400px;
   background-color: transparent;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Placeholder shown while image is loading */
