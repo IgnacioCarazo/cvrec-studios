@@ -3,7 +3,6 @@
   max-width: 100%;
   height: 100vh; /* Use 100vh for full viewport height */
   display: flex; /* Use flex to center content if needed */
-  overflow-y: hidden;
 }
 
 .about-content {
@@ -15,7 +14,6 @@
 }
 
 .about-image-wrapper {
-  width: 60%;
   height: 100vh;
   overflow: hidden;
   flex-shrink: 0; /* Prevent shrinking */
@@ -101,8 +99,6 @@
     flex-direction: column; /* Stack vertically on mobile */
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
-    height: 100vh;
   }
 
   .text-and-nav-container {
@@ -110,7 +106,6 @@
   }
 
   .about-image-wrapper {
-    width: 80%;
     height: 100vh; /* Match full viewport height */
     overflow: hidden;
     flex-shrink: 0;

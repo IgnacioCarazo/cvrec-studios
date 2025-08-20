@@ -5,7 +5,6 @@
   display: inline-block;
   width: 100%;
   max-width: 400px;
-  aspect-ratio: 3 / 4; /* Ensures consistent space for loading placeholder */
   background-color: transparent;
   overflow: hidden;
 }
