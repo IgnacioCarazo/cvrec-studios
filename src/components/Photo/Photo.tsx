@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Photo.css";
 
 interface PhotoProps {
@@ -7,16 +7,23 @@ interface PhotoProps {
 }
 
 const Photo: React.FC<PhotoProps> = ({ url, caption }) => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <div className="photo-container">
-      <div className="photo-inner">
-        <img src={url} alt={caption} className="photo-image" />
-        {caption && (
-          <div className="photo-overlay">
-            <span className="photo-caption">{caption}</span>
-          </div>
-        )}
-      </div>
+      {!loaded && <div className="photo-placeholder" />}
+      <img
+        src={url}
+        alt={caption}
+        className={`photo-image ${loaded ? "visible" : "hidden"}`}
+        onLoad={() => setLoaded(true)}
+        loading="lazy"
+      />
+      {caption && (
+        <div className="photo-overlay">
+          <span className="photo-caption">{caption}</span>
+        </div>
+      )}
     </div>
   );
 };
