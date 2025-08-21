@@ -7,6 +7,18 @@ const PhotosPage: React.FC = () => {
     <div className="photos-page">
       <div className="photos-holder">
         <Photo
+          url="https://res.cloudinary.com/dfh4b2nlw/image/upload/v1755709664/image00001_metdwq.webp"
+          caption="Yasmine Yamajako '25"
+        />
+        <Photo
+          url="https://res.cloudinary.com/dfh4b2nlw/image/upload/v1755709670/image00002_te8750.webp"
+          caption="Nelson in Cotonou, Benin '25"
+        />
+        <Photo
+          url="https://res.cloudinary.com/dfh4b2nlw/image/upload/v1747860305/image00009_gmdzns.webp"
+          caption="Adeola '23"
+        />
+        <Photo
           url="https://res.cloudinary.com/dfh4b2nlw/image/upload/v1747860304/image00002_nfpylw.webp"
           caption="Yasmine Yamajako '24"
         />
@@ -27,7 +39,7 @@ const PhotosPage: React.FC = () => {
           caption="Have you met Samsam? ’25"
         />
         <Photo
-          url="https://res.cloudinary.com/dfh4b2nlw/image/upload/v1747860308/image00015_i7i8zz.webp"
+          url="https://res.cloudinary.com/dfh4b2nlw/image/upload/v1755709675/image00003_mbiosw.webp"
           caption="Have you met Samsam? ’25"
         />
         <Photo
@@ -59,8 +71,8 @@ const PhotosPage: React.FC = () => {
           caption="Malachi '23"
         />
         <Photo
-          url="https://res.cloudinary.com/dfh4b2nlw/image/upload/v1747860305/image00009_gmdzns.webp"
-          caption="Adeola '23"
+          url="https://res.cloudinary.com/dfh4b2nlw/image/upload/v1755709681/image00004_vwq0jw.webp"
+          caption="Nelson in Cotonou, Benin '25"
         />
         <Photo
           url="https://res.cloudinary.com/dfh4b2nlw/image/upload/v1747860305/image00007_rfq1tg.webp"
